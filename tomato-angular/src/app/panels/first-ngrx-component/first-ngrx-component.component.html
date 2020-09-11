@@ -1,0 +1,21 @@
+<div>
+  <h2> Programmer Status Card </h2>
+  <ul>
+    <li>
+      <strong>Total Sips of Coffee</strong>
+      <span class='stat-number'>{{ programmerCoffeeSips$ | async }}</span>
+    </li>
+    <li>
+      <strong>Total Number of Frustrated Clicks</strong>
+      <span class='stat-number'>{{ programmerFrusratedClicks$ | async }}</span>
+    </li>
+    <li>
+      <strong>Current Programmer Energy Level</strong>
+      <span class='stat-number'>{{ programmerEnergyLevel$ | async }}</span>
+    </li>
+  </ul>
+</div>
+
+
+<button (click)='sipCoffee()'>Sip Coffee</button>
+<button (click)='frustrationClick()'>Click Frustratedly</button>
