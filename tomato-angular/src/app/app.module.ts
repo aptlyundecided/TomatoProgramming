@@ -14,7 +14,7 @@ import { reducers } from './store/reducers/index.reducer'
 // import { FirstReducer } from './ngrx/reducers/first-reducer.reducer'
 // import { selectProgrammerCoffeeSips } from './ngrx/selectors/first-selector.selector';
 import { FirstNgrxComponentComponent } from './panels/first-ngrx-component/first-ngrx-component.component'
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment'
 
 @NgModule({
   declarations: [
