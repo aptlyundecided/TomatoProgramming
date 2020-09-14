@@ -14,8 +14,12 @@
       <span class='stat-number'>{{ programmerEnergyLevel$ | async }}</span>
     </li>
   </ul>
+  <p>Enter the new click count here:</p>
+  <input
+  #clickcountid (keyup)="update_clickcount_input(clickcountid.value)">>
 </div>
 
 
 <button (click)='sipCoffee()'>Sip Coffee</button>
 <button (click)='frustrationClick()'>Click Frustratedly</button>
+<button (click)='setClickCount()'>Update Clicks</button>
