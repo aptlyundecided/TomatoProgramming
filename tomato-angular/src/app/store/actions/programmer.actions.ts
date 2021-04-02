@@ -1,4 +1,4 @@
-import { createAction } from '@ngrx/store';
+import { createAction, props } from '@ngrx/store';
 /*]
 [|]
 [*/
@@ -17,13 +17,19 @@ const FrustrationClick = createAction(
 const Reset = createAction(
   `${ACTION_TITLE} RESET`
 )
+// ------ []
+const SetClickCount = createAction(
+  `${ACTION_TITLE} SET CLICK COUNT`,
+  props<{newClickCount: number}>()
+)
 /*]
 [|]
 [*/
 export const ProgrammerActions = {
   FrustrationClick,
   SipCoffee,
-  Reset
+  Reset,
+  SetClickCount
 }
 /*]
 [E] END

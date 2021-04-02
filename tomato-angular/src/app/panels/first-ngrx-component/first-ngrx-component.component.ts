@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 import { Observable } from 'rxjs'
 import { Store, select } from '@ngrx/store'
 import { PROGRAMMER } from 'src/app/store/types/programmer'
@@ -7,7 +7,7 @@ import {
   selectProgrammerFrustratedClicks,
   selectProgrammerEnergyLevel
 } from '../../store/selectors/programmer.selectors'
-
+import { ProgrammerActions} from '../../store/actions/programmer.actions'
 
 
 @Component({
@@ -20,17 +20,23 @@ export class FirstNgrxComponentComponent implements OnInit {
   programmerCoffeeSips$: Observable<number>
   programmerFrusratedClicks$: Observable<number>
   programmerEnergyLevel$: Observable<number>
-
+  /*]
+  [|]
+  [*/
+  click_count_input: number = 0
+  /*]
+  [|]
+  [*/
   constructor(private store: Store<{programmer: PROGRAMMER}>) {
     this.programmerCoffeeSips$ = store.select(selectProgrammerCoffeeSips)
     this.programmerFrusratedClicks$ = this.store.select(selectProgrammerFrustratedClicks)
     this.programmerEnergyLevel$ = this.store.select(selectProgrammerEnergyLevel)
   }
-
-
+  /*]
+  [|]
+  [*/
   ngOnInit(): void {
   }
-
   /*]
   [|] --------------------------------------------------------- ||
   [|]        CLICK HANDLERS
@@ -48,4 +54,13 @@ export class FirstNgrxComponentComponent implements OnInit {
   /*]
   [|]
   [*/
+  update_clickcount_input (num: string) {
+    this.click_count_input = parseInt(num)
+  }
+  /*]
+  [|]
+  [*/
+  setClickCount () {
+    this.store.dispatch(ProgrammerActions.SetClickCount({newClickCount: this.click_count_input}))
+  }
 }

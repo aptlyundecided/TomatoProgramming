@@ -36,7 +36,8 @@ const programmerReducer = createReducer(
   initialState,
   on(ProgrammerActions.SipCoffee, state => ({...state, coffee_sips: state.coffee_sips + 1, energy_meter: state.energy_meter + 5})),
   on(ProgrammerActions.FrustrationClick, state => ({...state, frustrated_clicks: state.frustrated_clicks + 1, energy_meter: state.energy_meter - 5})),
-  on(ProgrammerActions.Reset, state => ({frustrated_clicks: 0, coffee_sips: 0, glasses_adjustments: 0, energy_meter: 0, random_numbers: []}))
+  on(ProgrammerActions.Reset, state => ({frustrated_clicks: 0, coffee_sips: 0, glasses_adjustments: 0, energy_meter: 0, random_numbers: []})),
+  on(ProgrammerActions.SetClickCount, (state, { newClickCount }) => ({...state, frustrated_clicks: newClickCount}))
 )
 /*]
 [|]
