@@ -1,7 +1,7 @@
 const signalR = require("@microsoft/signalr");
 
 let connection = new signalR.HubConnectionBuilder()
-    .withUrl("http://192.168.17.129:61920/clienthub")
+    .withUrl("http://localhost:61920/clienthub")
     .build();
 
 
