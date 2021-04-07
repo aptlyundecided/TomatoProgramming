@@ -1,4 +1,4 @@
-class CarTwo {
+export class CarTwo {
     private make: string;
     private model: string;
     private year: number;
