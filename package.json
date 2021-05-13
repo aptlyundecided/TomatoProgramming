@@ -1,0 +1,29 @@
+{
+  "scripts": {
+    "tools-svg-parse": "ts-node ./tools/svg/svg-parse/svg-file-read.ts"
+  },
+  "name": "tomatocode",
+  "description": "At least 5 days of the week, I will write code, read, do tutorials, SOMETHING to continue progressing as a programmer, developer, engineer, whatever you want to call it.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "tomato-util": "./util",
+    "d3": "^6.7.0",
+    "d3-fetch": "^2.0.0",
+    "fast-xml-parser": "^3.19.0",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.3.0",
+    "xml-js": "^1.6.11"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aptlyundecided/TomatoProgramming.git"
+  },
+  "author": "Alex Wilson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aptlyundecided/TomatoProgramming/issues"
+  },
+  "homepage": "https://github.com/aptlyundecided/TomatoProgramming#readme"
+}

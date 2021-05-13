@@ -1,0 +1,6 @@
+{
+    "name": "tomato-util",
+    "version": "0.0.1",
+    "description": "utilily functions/modules/vars for tomato code project",
+    "main": "index.ts"
+}
