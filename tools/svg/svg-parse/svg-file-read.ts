@@ -45,6 +45,8 @@ const RetrieveLayerOneElements = (d: any): any => {
  * @returns path data set
  */
 const ScrapePathAttributes = (e: any) => {
+    console.log(e.attributes.id);
+
     return {
         id: parseInt(e.attributes.id.replace('edge-', ''), 10),
         d: e.attributes.d

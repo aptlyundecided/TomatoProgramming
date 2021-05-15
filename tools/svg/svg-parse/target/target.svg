@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="15.839192"
-     inkscape:cx="115.9048"
-     inkscape:cy="694.91934"
+     inkscape:zoom="1.979899"
+     inkscape:cx="374.66776"
+     inkscape:cy="669.729"
      inkscape:document-units="mm"
      inkscape:current-layer="layer3"
      showgrid="false"
@@ -45,7 +45,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -63,28 +63,6 @@
        preserveAspectRatio="none"
        height="101.71281"
        width="195.19534" />
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0"
-       d="m 159.1044,113.18543 -3.31915,-0.0236 c -0.82451,-0.0135 -2.3487,1.89603 -2.35054,2.59857 l 0.0114,2.50308"
-       id="edge-107"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccc">
-      <desc
-         id="desc724">19 --- 32</desc>
-      <title
-         id="title722">107</title>
-    </path>
-    <path
-       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 36.923548,108.46072 -5.512875,-0.007 c -2.646523,0.0286 -1.552347,3.57619 -3.894114,4.42584 -1.234225,0.24755 -0.911798,0.18642 -2.452013,0.32983"
-       id="edge-117"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="cccc">
-      <desc
-         id="desc730">17 --- 31</desc>
-      <title
-         id="title728">117</title>
-    </path>
   </g>
   <g
      inkscape:groupmode="layer"
@@ -540,13 +518,13 @@
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 94.078874,158.2203 30.201456,-0.0668"
-       id="43"
+       id="edge-43"
        inkscape:connector-curvature="0"
        inkscape:label="edge-43">
       <desc
          id="desc4667">61 --- 63</desc>
       <title
-         id="title4665">edge 43</title>
+         id="title4665">43</title>
     </path>
     <path
        style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -1202,18 +1180,7 @@
       <title
          id="title5216">12</title>
     </path>
-    <path
-       sodipodi:nodetypes="cccc"
-       inkscape:connector-curvature="0"
-       id="path5224"
-       d="m 32.458705,148.69159 -0.02363,2.24423 c -0.02691,1.52166 2.28839,2.60836 3.023808,2.59859 l 14.859189,0.0472"
-       style="display:inline;fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       inkscape:label="#edge-12">
-      <desc
-         id="desc5220">44 --- 54</desc>
-      <title
-         id="title5222">12</title>
-    </path>
+
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 27.521392,153.53441 22.796687,0.0472"
@@ -1334,6 +1301,28 @@
          id="desc5361">18 --- 20</desc>
       <title
          id="title5359">106</title>
+    </path>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0"
+       d="m 159.1044,113.18543 -3.31915,-0.0236 c -0.82451,-0.0135 -2.3487,1.89603 -2.35054,2.59857 l 0.0114,2.50308"
+       id="edge-107"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc">
+      <desc
+         id="desc724">19 --- 32</desc>
+      <title
+         id="title722">107</title>
+    </path>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 36.923548,108.46072 -5.512875,-0.007 c -2.646523,0.0286 -1.552347,3.57619 -3.894114,4.42584 -1.234225,0.24755 -0.911798,0.18642 -2.452013,0.32983"
+       id="edge-117"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc">
+      <desc
+         id="desc730">17 --- 31</desc>
+      <title
+         id="title728">117</title>
     </path>
   </g>
 </svg>
