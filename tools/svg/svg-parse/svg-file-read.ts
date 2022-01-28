@@ -18,6 +18,7 @@ const RetrieveRelevantLevelElements = (data: any) => {
     const propName = 'elements';
 
     try {
+        console.log(data);
         return xml2js(data)[propName].filter((d: any) => { return d.name === 'svg'})[0].elements;
     } catch {
         return {
@@ -35,9 +36,27 @@ const RetrieveRelevantLevelElements = (data: any) => {
  * meaningful track data.
  * 
  */
-const RetrieveLayerOneElements = (d: any): any => {
+const RetrieveLayerOneElements = (d: any[]): any => {
+    if (Array.isArray(d) === false) {
+        console.log('Layer One Elements Error:')
+        console.log(d)
+        return [];
+    }
     return d.filter((item: any) => {
         return item.attributes.id === 'layer1';
+    })[0].elements;
+};
+/**
+ * Retrieve Reelstand Elements 
+ */
+const RetreiveReelstandElements = (d: any[]) => {
+    if (Array.isArray(d) === false) {
+        console.log('Failed retrieving reelstand elements');
+        console.log(d);
+        return [];
+    }
+    return d.filter((item: any) => {
+        return item.attributes.id === 'layer4'
     })[0].elements;
 };
 /**
@@ -49,37 +68,71 @@ const RetrieveLayerOneElements = (d: any): any => {
  * @returns path data set
  */
 const ScrapePathAttributes = (e: any) => {
+    console.log(e);
     return {
         id: parseInt(e.attributes.id.replace('edge-', ''), 10),
         d: e.attributes.d
     };
 };
 /**
+ * Scrape Reelstand Attributes
+ * ---
+ * retrieve key attributes for plotting reelstands from the track SVG.
+ */
+const ScrapeReelstandAttributes = (e: any) => {
+    return {
+        id: e.attributes.id,
+        cssTransform: e.attributes.transform,
+        style: e.attributes.style
+    };
+};
+/**
  * Do the whole business
  */
 readFile(DataPaths.svg.svgTargetFile, "utf8", (err, data) => {
-    const SVGData = [];
+    const ShuttleTrackData: any[] = [];
+    const reelStandData: any[] = [];
     /**
      * Extract meaningful elements.
      */
     const elements = RetrieveRelevantLevelElements(data);
+
+    console.log(elements);
+
     const layerOneElements = RetrieveLayerOneElements(elements);
+    const reelstandElements = RetreiveReelstandElements(elements);
     /**
      * iterate meaningful elements, and scrape data from them.
      */
     layerOneElements.forEach((element: any) => {
         const n = ScrapePathAttributes(element);
-        SVGData.push(n);
+        ShuttleTrackData.push(n);
     });
     /**
-     * convert svg data object into JSON.
+     * iterate reelstands data; build minimal data set for render
      */
-    const JSONData = JSON.stringify(SVGData);
+    reelstandElements.forEach((element: any) => {
+        const n = ScrapeReelstandAttributes(element);
+        reelStandData.push(n);
+    });
+    /**
+     * convert svg data objects into JSON.
+     */
+    const ShuttleTrackDataJSON = JSON.stringify(ShuttleTrackData);
+    const ReelstandDataJSON = JSON.stringify(reelStandData);
     /**
      * Write the new JSON data to file.
      */
-    writeFile(DataPaths.svg.svgDataDump, JSONData, (err) => {
+    writeFile(DataPaths.svg.svgDataDump, ShuttleTrackDataJSON, (err) => {
         if (err) { console.error('You done goofed.'); }
         else { console.log('New Data File Created'); }
     });
+    /**
+     *
+     */
+    writeFile(DataPaths.svg.reelstandDataDump, ReelstandDataJSON, (err) => {
+        if (err) { console.error('You have gone and goofed'); }
+        else { console.log('New reelstand jsonfile created'); }
+    })
 });
+

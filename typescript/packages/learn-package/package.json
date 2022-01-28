@@ -1,0 +1,6 @@
+{
+    "name": "learn-package",
+    "description": "learning how to use package",
+    "version": "0.0.1",
+    "main": "index.ts"
+}

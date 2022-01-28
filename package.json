@@ -3,19 +3,20 @@
     "tools-svg-parse": "ts-node ./tools/svg/svg-parse/svg-file-read.ts"
   },
   "name": "tomatocode",
-  "description": "At least 5 days of the week, I will write code, read, do tutorials, SOMETHING to continue progressing as a programmer, developer, engineer, whatever you want to call it.",
+  "description": "learn about code features, build tooling for future use",
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
-    "tomato-util": "./util",
     "d3": "^6.7.0",
     "d3-fetch": "^2.0.0",
     "fast-xml-parser": "^3.19.0",
     "jest": "^26.4.2",
+    "learning": "./typescript/packages/learn-package",
+    "random-words": "^1.1.2",
+    "tomato-util": "./util",
     "ts-jest": "^26.3.0",
     "xml-js": "^1.6.11"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/aptlyundecided/TomatoProgramming.git"
