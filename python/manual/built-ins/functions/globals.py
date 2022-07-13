@@ -1,0 +1,4 @@
+
+g = globals()
+
+print(g)
