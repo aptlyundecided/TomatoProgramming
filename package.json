@@ -7,14 +7,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
+    "@types/mocha": "^9.1.1",
     "d3": "^6.7.0",
     "d3-fetch": "^2.0.0",
     "fast-xml-parser": "^3.19.0",
     "jest": "^26.4.2",
     "learning": "./typescript/packages/learn-package",
+    "mocha": "^10.0.0",
     "random-words": "^1.1.2",
     "tomato-util": "./util",
     "ts-jest": "^26.3.0",
+    "typescript": "^4.7.4",
     "xml-js": "^1.6.11"
   },
   "repository": {
@@ -26,5 +29,10 @@
   "bugs": {
     "url": "https://github.com/aptlyundecided/TomatoProgramming/issues"
   },
-  "homepage": "https://github.com/aptlyundecided/TomatoProgramming#readme"
+  "homepage": "https://github.com/aptlyundecided/TomatoProgramming#readme",
+  "devDependencies": {
+    "@types/chai": "^4.3.1",
+    "chai": "^4.3.6",
+    "ts-node": "^10.9.1"
+  }
 }
